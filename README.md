@@ -1,4 +1,4 @@
-# terraform-eks
+# Create an EKS Cluster using Terraform
 
 A sample repository to create EKS on AWS using Terraform.
 
@@ -22,14 +22,28 @@ https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
 
 Its very easy to connect Terraform with AWS. Run `aws configure` command and provide the AWS Security credentials as shown in the video.
 
-### Initialize Terraform
+## Steps to Deploy
 
-Clone the repository and Run `terraform init`. This will intialize the terraform environment for you and download the modules, providers and other configuration required.
+### Step 1: Clone the Repository
 
-### Optionally review the terraform configuration
+```
+git clone git@github.com:ravindrasinghh/Kubernetes-Playlist.git
+cd Kubernetes-Playlist/Lesson1/
+```
+### Step 2: Initialize Terraform
+- terraform init
+- terraform plan
+- terraform apply
 
-Run `terraform plan` to see the configuration it creates when executed.
+### Step 3: Access Your EKS Cluster
+Once the cluster is created, you can configure kubectl to interact with your EKS cluster using the following command:
+```
+aws eks --region <region-name> update-kubeconfig --name <eks-cluster-name>
+```
+You can then verify the cluster connectivity:
+```
+kubectl get nodes
+```
 
-### Finally, Apply terraform configuation to create EKS cluster with VPC 
-
-`terraform apply`
+## Troubleshooting
+If you encounter any issues, refer to the Terraform documentation or raise an issue in this repository.
