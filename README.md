@@ -1,4 +1,5 @@
 # Create an EKS Cluster using Terraform
+![EKS](https://github.com/user-attachments/assets/d529f28a-c56e-486a-b5ae-0363f2f56107)
 
 A sample repository to create EKS on AWS using Terraform.
 
@@ -27,8 +28,8 @@ Its very easy to connect Terraform with AWS. Run `aws configure` command and pro
 ### Step 1: Clone the Repository
 
 ```
-git clone git@github.com:ravindrasinghh/Kubernetes-Playlist.git
-cd Kubernetes-Playlist/Lesson1/
+https://github.com/itksrajput/terraform-eks.git
+cd terraform-eks
 ```
 ### Step 2: Initialize Terraform
 - terraform init
